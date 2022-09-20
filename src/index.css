@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pdf {
+  width: 500px;
+  height: 975px;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.nav {
+  background: url("./assets/bookhero.jpg") no-repeat;
+  background-size: cover;
+  background-position: 0% 50%;
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+          animation-name: bounceIn;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  visibility: visible;
+}
+
+@-webkit-keyframes bounceIn {
+  20%, 40%, 60%, 80%, 0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  20%, 40%, 60%, 80%, 0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav {
+    background-position: 0% 100%;
+  }
+}
+.hover-underline-animation {
+  position: inherit;
+}
+
+.hover-underline-animation:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 3px;
+  left: 0;
+  background-color: red;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@layer components {
+  .nice {
+    @apply inline-flex;
+  }
+  .nicer {
+    @apply flex px-10  bg-slate-200 h-10 w-52 rounded-xl m-5;
+  }
+  .image {
+    @apply w-96 h-72 rounded-3xl;
+  }
+}/*# sourceMappingURL=index.css.map */
