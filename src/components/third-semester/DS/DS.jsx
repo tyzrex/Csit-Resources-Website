@@ -6,6 +6,7 @@ import OldQues from '../../Card-Components/OldQues'
 import ViewPdf from '../../Card-Components/ViewPdf'
 import Books from '../../Card-Components/Books'
 import Labwork from '../../Card-Components/Labwork'
+import Midterm from '../../Card-Components/Midterm'
 
 
 const DS = () => {
@@ -21,6 +22,7 @@ const DS = () => {
       <OldQues name='DSA'/>
       <Books name='DSA'go ="https://drive.google.com/file/d/1hMZ-ZsKpKVZ_90LbJV_pPa4cs45uNyFh/preview"/>
       <Labwork name='DSA' go={dataArray.DSA[2]}/>
+      <Midterm name='DSA' go={dataArray.DSA[3]}/>
     </div>
     <ViewPdf data-aos='fade-down' data-aos-duration='500'  source={pdf}/>
     </div>
