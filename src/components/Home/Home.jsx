@@ -1,19 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import About from "../About";
-import Hero from "../Hero";
-import SubjectCards from "../SubjectCards";
-import Header from "../Header";
-import Contributors from "../Contributors";
-import MSP from "../../assets/msp.jpg";
+import About from "../Main-Components/About";
+import Contributors from "../Main-Components/Contributors";
+import Hero from "../Main-Components/Hero";
+import Semestersdropdown from "../Main-Components/Semesters-dropdown";
+import SubjectCards from "../Main-Components/SubjectCards";
 
 const home = () => {
   return (
     <>
       <Hero />
       <About />
+      <Semestersdropdown />
       <SubjectCards />
-      {/* <Contributors FirstName={"Mr. Safal"} LastName={"Piya"} source={MSP}/> */}
+      <Contributors />
     </>
   );
 };
