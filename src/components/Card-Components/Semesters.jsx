@@ -4,7 +4,7 @@ import { AiOutlineDown } from 'react-icons/ai'
 import {AiOutlineArrowUp} from 'react-icons/ai'
 import SubjectCards from '../Main-Components/SubjectCards';
 
-const Semesters = ({ name }) => {
+const Semesters = ({ name , ...subjects }) => {
     const [show, setShow] = useState(true);
     const handleShow = () => {
         setShow(!show);
@@ -12,7 +12,7 @@ const Semesters = ({ name }) => {
 
     return (
         <div className='h-auto'>
-            <div onClick={handleShow} className='bg-black border grid border-gray-500 h-[8vh] hover-underline-animation cursor-pointer'>
+            <div onClick={handleShow} className='bg-black border grid border-gray-500 h-[8vh] hover-underline-animation cursor-pointer fadeIn rounded-xl'>
                 <div className='flex justify-between mx-4 items-center text-2xl'>
                     <div>
                         {name}
@@ -22,8 +22,8 @@ const Semesters = ({ name }) => {
                 </div>
                 
             </div>
-            <div className={!show ? ' block h-[auto] fadeIn ' : 'hidden fadeOut'}>
-                <SubjectCards/>
+            <div className={!show ? ' block h-[auto]' : 'hidden'}>
+                <SubjectCards {...subjects} />
             </div>
         </div>
     )
